@@ -1,0 +1,35 @@
+{
+  "name": "staking-app",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "codegen": "node scripts/codegen.mjs",
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "smoke": "tsx scripts/smoke.ts",
+    "idl": "cd ../staking && anchor idl build -o target/idl/staking.json -- --lib"
+  },
+  "dependencies": {
+    "@solana/kit": "^8.6.0",
+    "@solana/kit-plugin-rpc": "^0.23.0",
+    "@solana/kit-plugin-wallet": "^0.23.0",
+    "@solana/react": "^8.6.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "swr": "^2.5.1"
+  },
+  "devDependencies": {
+    "@codama/nodes-from-anchor": "^1.5.6",
+    "@codama/renderers-js": "^2.9.0",
+    "@solana/kit-plugin-signer": "^0.23.0",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.3.0",
+    "codama": "^1.11.0",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.8"
+  }
+}
